@@ -3,8 +3,8 @@
 
 <template>
     <div class="mx-auto">
-        <h1 class="p-2 text-4xl font-semibold h-fit text-violet-600">
-            About</h1>
+        <h1 class="p-2 text-4xl font-semibold h-fit">
+            User 1</h1>
     </div>
 </template>
 
