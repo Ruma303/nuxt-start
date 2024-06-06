@@ -1,6 +1,8 @@
 <script setup>
     const route = useRouter();
-    console.log(route.params.id);
+    // console.log(route.params.id);
+    const nuxt = useNuxtApp();
+    // console.log(nuxt);
 </script>
 
 <template>
