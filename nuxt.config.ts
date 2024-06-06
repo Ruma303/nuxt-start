@@ -3,7 +3,7 @@ import { resolve } from 'path';
 export default defineNuxtConfig({
     devtools: { enabled: true },
     alias: {
-        '@': resolve(__dirname, '/src'),
+        '@': resolve(__dirname, '/pages'),
         '~': resolve(__dirname, '/'),
         '@@': resolve(__dirname, '/assets'),
     },
