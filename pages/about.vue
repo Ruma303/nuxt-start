@@ -2,8 +2,8 @@
 </script>
 
 <template>
-    <div>
-        <p class="bg-red-500 p-2 text-white text-xl">About Page</p>
+    <div class="mx-auto">
+        <h1 class="p-2 text-4xl font-semibold h-fit text-violet-600">About</h1>
     </div>
 </template>
 
