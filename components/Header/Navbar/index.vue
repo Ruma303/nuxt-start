@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-    <nav class="w-full shadow-md shadow-gray-200 rounded-t-lg py-4">
+    <nav>
         <div class="flex justify-center items-center gap-4">
             <NuxtLink
                 to="/"
