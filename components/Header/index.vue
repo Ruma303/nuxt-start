@@ -4,5 +4,6 @@
     >
         <HeaderLogo />
         <HeaderNavbar />
+        <HeaderNavbarSearch />
     </header>
 </template>
