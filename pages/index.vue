@@ -1,4 +1,8 @@
-<script setup></script>
+<script setup>
+definePageMeta({
+    middleware: [() => console.log("middleware inline"), "routing-log"],
+});
+</script>
 
 <template>
     <div class="mx-auto w-full rounded-lg h-full flex flex-col gap-2">

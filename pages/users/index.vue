@@ -28,5 +28,4 @@ const userID = ref(null);
         </div>
     </div>
 </template>
-
 <style scoped lang="scss"></style>
