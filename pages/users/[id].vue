@@ -10,6 +10,10 @@ const nuxt = useNuxtApp();
 const route = useRoute();
 
 definePageMeta({
+    validate: async (route) => {
+        const isDigit = /^\d+$/.test(route.params.id);
+        if (!isDigit) return abortNavigation("ID must be a number");
+    },
     middleware: [
         (to) => {
             // Accedere direttamente ai parametri della rotta
