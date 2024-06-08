@@ -1,13 +1,14 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { resolve } from 'path';
+import { resolve } from "path";
+
 export default defineNuxtConfig({
     devtools: { enabled: true },
     alias: {
-        '~': resolve(__dirname, '/'),
-        '@': resolve(__dirname, '/pages'),
-        '@@': resolve(__dirname, '/assets'),
+        "~": resolve(__dirname, "."),
+        "@": resolve(__dirname, "pages"),
+        "@@": resolve(__dirname, "assets"),
     },
-    css: ['/assets/scss/main.scss'],
+    css: ["~/assets/scss/main.scss"],
     postcss: {
         plugins: {
             tailwindcss: {},
@@ -24,5 +25,5 @@ export default defineNuxtConfig({
             },
         },
     },
-    // ssr: true,
+    ssr: true,
 });
