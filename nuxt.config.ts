@@ -24,5 +24,18 @@ export default defineNuxtConfig({
             },
         },
     },
-    // ssr: true,
+    app: {
+        head: {
+            charset: 'utf-8',
+            viewport: 'width=device-width, initial-scale=1',
+            title: 'Nuxt App',
+            meta: [
+                { hid: 'description', name: 'description', content: 'Nuxt App' },
+            ],
+            link: [
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+                { rel: 'stylesheet', href: '~/assets/scss/main.scss' },
+            ]
+        }
+    }
 });
