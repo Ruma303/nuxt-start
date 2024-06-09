@@ -14,6 +14,9 @@
             <NuxtLink to="/users" class="text-black hover:text-emerald-500"
                 >Users</NuxtLink
             >
+            <NuxtLink to="/fake-store" class="text-black hover:text-emerald-500"
+                >FakeStore</NuxtLink
+            >
         </div>
     </nav>
 </template>

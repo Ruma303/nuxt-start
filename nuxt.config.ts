@@ -46,7 +46,6 @@ export default defineNuxtConfig({
           layoutTransition: {
             name: 'slide',
             mode: 'out-in' // default
-          }
         }
     },
 });
