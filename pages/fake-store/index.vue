@@ -1,4 +1,4 @@
-    <script setup>
+<script setup>
     const {
         data: products,
         pending,
@@ -7,7 +7,7 @@
     console.log("Pending: ", pending);
     console.log("Products: ", products);
     console.log("Error: ", error);
-    </script>
+</script>
 
 <template>
     <div class="mx-auto w-full rounded-lg min-h-full flex flex-col gap-2">
@@ -31,11 +31,12 @@
                 <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4">
                     <div v-for="product in products" :key="product.id" class="card max-w-64 shadow-xl bg-white">
                         <figure>
-                            <img :src="product.image" :alt="product.title" class="w-32 h-auto" />
+                            <img :src="product.image" :alt="product.title"
+                                class="w-32 h-32 object-contain object-center" />
                         </figure>
                         <div class="card-body">
                             <h2 class="card-title text-lg text-violet-500">{{ product.title }}</h2>
-                            <p class="text-sm text-slate-600">{{ product.description }}</p>
+                            <p class="text-md text-slate-600 truncate hover:text-clip">{{ product.description }}</p>
                             <div class="card-actions flex items-center justify-between">
                                 <span class="text-lg font-semibold text-violet-600">{{ product.price }}$</span>
                                 <button class="btn btn-primary">Buy Now</button>
