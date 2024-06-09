@@ -6,7 +6,7 @@ definePageMeta({
 const route = useRoute();
 const productId = ref(route.params.productId);
 
-const { data: product, refresh,  pending,} = useFetch(
+const { data: product, refresh, pending,} = useFetch(
     () => productId.value ? `https://fakestoreapi.com/products/${productId.value}` : null,
     { immediate: true },
 );
@@ -28,9 +28,19 @@ onMounted(() => {
 </script>
 
 <template>
+     <NuxtLink
+                to="/products"
+                class="bg-indigo-500 px-4 p-2 text-white w-fit rounded-md hover:bg-indigo-600 mt-4 ms-20"
+            >
+                Go back to products</NuxtLink
+            >
+    <div v-if="pending"
+    class="mx-auto p-4 bg-white w-3/5 grid grid-cols-2 gap-3 text-center">
+        Loading product...
+    </div>
     <div
         v-if="product"
-        class="mx-auto mt-6 p-4 bg-white w-3/5 grid grid-cols-2 gap-3 items-center justify-center"
+        class="mx-auto mt-6 p-4 bg-white w-3/5 grid grid-cols-2 gap-6 items-center justify-center"
     >
         <figure>
             <img
@@ -62,23 +72,12 @@ onMounted(() => {
                     Buy Now
                 </button>
             </div>
-            <NuxtLink
-                to="/products"
-                class="bg-indigo-500 px-4 p-2 text-white w-fit rounded-md"
-            >
-                Go back to products</NuxtLink
-            >
+
         </article>
     </div>
     <div v-else class="flex flex-col gap-2 p-4 items-center">
         <p class="text-red-400 text-center">
             Product {{ productId }} not found
         </p>
-        <NuxtLink
-            to="/products"
-            class="bg-indigo-500 px-4 p-2 text-white w-fit rounded-md"
-        >
-            Go back to products</NuxtLink
-        >
     </div>
 </template>

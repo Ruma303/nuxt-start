@@ -10,6 +10,8 @@ const {
 // console.log("Pending: ", pending);
 // console.log("Products: ", products);
 // console.log("Error: ", error);
+
+
 </script>
 
 <template>
@@ -33,7 +35,9 @@ const {
             </template>
 
             <div v-else class="flex flex-col gap-2 items-center justify-center">
-
+                <div class="text-md text-center text-gray-500">
+                    Total Products: {{ products.length }}
+                </div>
                 <section
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4"
                 >
