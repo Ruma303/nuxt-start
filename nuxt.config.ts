@@ -37,9 +37,16 @@ export default defineNuxtConfig({
                 { rel: 'stylesheet', href: '~/assets/scss/main.scss' },
             ]
         },
+        // pageTransition: { name: 'page', mode: 'out-in' },
+        //layoutTransition: { name: 'layout', mode: 'out-in' }
         pageTransition: {
-            name: 'page',
-            mode: 'out-in',
-        },
-    }
+            name: 'fade',
+            mode: 'out-in' // default
+          },
+          layoutTransition: {
+            name: 'slide',
+            mode: 'out-in' // default
+          }
+        }
+    },
 });
