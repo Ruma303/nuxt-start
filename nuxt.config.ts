@@ -34,7 +34,7 @@ export default defineNuxtConfig({
             ],
             link: [
                 { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-                { rel: 'stylesheet', href: '~/assets/scss/main.scss' },
+                //{ rel: 'stylesheet', href: '~/assets/scss/main.scss' },
             ]
         },
         // pageTransition: { name: 'page', mode: 'out-in' },
