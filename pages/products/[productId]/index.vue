@@ -6,7 +6,7 @@ definePageMeta({
 const route = useRoute();
 const productId = ref(route.params.productId);
 
-const { data: product, refresh, pending,} = useFetch(
+const { data: product, refresh, pending } = useFetch(
     () => productId.value ? `https://fakestoreapi.com/products/${productId.value}` : null,
     { immediate: true },
 );
