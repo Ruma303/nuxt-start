@@ -38,7 +38,9 @@ const {
                 <div class="flex gap-5 items-center justify-center">
                     <p class="text-center text-gray-500">Total Products: {{ products.length }}</p>
                     <NuxtLink to="/products/create"
-                    class="btn btn-outline btn-accent hover:text-white">Create product</NuxtLink>
+                        class="btn btn-outline btn-accent hover:text-white">Create product</NuxtLink>
+                    <NuxtLink to="/products/api/v1"
+                        class="btn btn-outline btn-info hover:text-white">API</NuxtLink>
                 </div>
                 <section
                     class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-4"
